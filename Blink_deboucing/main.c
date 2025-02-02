@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "pico\stdlib.h"
+
 
 #include "matriz_leds.h"
 #define MATRIZ_LED 7; // Pino que a matriz de leds está conectada
