@@ -13,9 +13,6 @@ if (EXISTS ${picoVscode})
 endif()
 # ====================================================================================
 
-
-
-
 cmake_minimum_required(VERSION 3.13)
 
 set(CMAKE_C_STANDARD 11)
@@ -24,11 +21,11 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(PICO_BOARD pico_w CACHE STRING "Board type")
 include(pico_sdk_import.cmake)
-project(AtividadeInterrup C CXX ASM)
+project(Debouncing-atividade-EmbarcaTech C CXX ASM)
 pico_sdk_init()
-add_executable(AtividadeInterrup AtividadeInterrup.c )
+add_executable(Debouncing-atividade-EmbarcaTech Debouncing-atividade-EmbarcaTech.c )
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/generated)
-pico_generate_pio_header(AtividadeInterrup ${CMAKE_CURRENT_LIST_DIR}/ws2812.pio OUTPUT_DIR ${CMAKE_CURRENT_LIST_DIR}/generated)
-target_sources(AtividadeInterrup PRIVATE AtividadeInterrup.c)
-target_link_libraries(AtividadeInterrup PRIVATE pico_stdlib hardware_pio)
-pico_add_extra_outputs(AtividadeInterrup) 
+pico_generate_pio_header(Debouncing-atividade-EmbarcaTech ${CMAKE_CURRENT_LIST_DIR}/ws2812.pio OUTPUT_DIR ${CMAKE_CURRENT_LIST_DIR}/generated)
+target_sources(Debouncing-atividade-EmbarcaTech PRIVATE Debouncing-atividade-EmbarcaTech.c)
+target_link_libraries(Debouncing-atividade-EmbarcaTech PRIVATE pico_stdlib hardware_pio)
+pico_add_extra_outputs(Debouncing-atividade-EmbarcaTech) 

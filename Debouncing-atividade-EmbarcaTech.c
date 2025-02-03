@@ -5,6 +5,7 @@
 #include "hardware/pio.h"
 #include "hardware/clocks.h"
 #include "ws2812.pio.h"
+#include "inicializar.h"
 
 // Definição de constantes da matriz de leds
 #define IS_RGBW false
